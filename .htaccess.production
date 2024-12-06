@@ -1,0 +1,4 @@
+SetEnv DB_SERVER localhost
+SetEnv DB_USERNAME yy559
+SetEnv DB_PASSWORD b+mV/3koighYl/WV
+SetEnv DB_NAME yy559_db
