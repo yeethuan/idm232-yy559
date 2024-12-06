@@ -15,7 +15,7 @@
         <!-- nav bar -->
         <nav class="navbar">
             <a href="index.php" class="logo">
-                <img src="media/simmer-altlogo.png" alt="Simmer Logo 2"/>
+                <img src="media/new-simmerlogo.webp" alt="Simmer Logo 2"/>
             </a>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
