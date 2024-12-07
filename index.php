@@ -15,15 +15,15 @@
     <header>
         <!-- nav bar -->
         <nav class="navbar">
-            <a href="index.php" class="logo">
+            <a href="https://digmstudents.westphal.drexel.edu/~yy559/index.php" class="logo">
                 <img src="pics/simmer-altlogo.webp" alt="Simmer Logo 2"/>
             </a>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
             <ul id="nav-menu">
-                <li><a href="index.php/">Home</a></li>
-                <li><a href="all-recipes.php">Recipes</a></li>
+                <li><a href="https://digmstudents.westphal.drexel.edu/~yy559/index.php">Home</a></li>
+                <li><a href="https://digmstudents.westphal.drexel.edu/~yy559/all-recipes.php">Recipes</a></li>
                 <li><a href="help.php">Help</a></li>
             </ul>
         </nav>
@@ -44,7 +44,7 @@
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search recipes..." onkeyup="searchRecipes()">
             </div>
-            <a href="all-recipes.php" class="btn">All Recipes</a>
+            <a href="https://digmstudents.westphal.drexel.edu/~yy559/all-recipes.php" class="btn">All Recipes</a>
         </div>
     </section>
 
@@ -93,7 +93,5 @@
     <footer>
         <p>&copy; 2024 Simmer. All Rights Reserved.</p>
     </footer>
-
-    <script src="index.js"></script>
 </body>
 </html>

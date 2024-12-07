@@ -10,63 +10,82 @@ body {
     color: #333;
 }
 
+h1{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #6b0000;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #6b0000;
+    text-decoration: none;
+}
+
+h2.a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #6f6f6f;
+    text-decoration: none;
+}
+
+h3.a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #777;
+    text-decoration: none;
+}
 
 .recipes-section {
     padding: 50px 0;
     background-color: #fefefe;
     text-align: center;
 }
-
-.recipes-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #6b0000;
-}
-
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 90%;
     margin: 0 auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    text-decoration: none;
 }
 
-.recipe-card {
+.card {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease;
+    height: 100%;
 }
 
-.recipe-card img {
-    width: 100%;
+.card img {
     border-radius: 10px;
     margin-bottom: 20px;
+    max-width: 300px;
 }
 
-.recipe-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
 
-.recipe-card p {
-    font-size: 1rem;
-    color: #777;
-    text-decoration: none;
-}
-
-.recipe-card:hover {
+.card:hover {
     transform: translateY(-10px);
 }
 
-.recipe-card a {
+.recipe-grid.card a {
     text-decoration: none;
     color: inherit; 
 }
 
-.recipe-card a:visited {
+.recipe-grid.card a:visited {
     text-decoration: none;
 }
 
@@ -78,27 +97,90 @@ body {
     color: #A31200;
 }
 
-/* Ask Button */
-.ask-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+
+
+/* SEARCH BAR STYLING */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5dea5;
 }
 
-#ask-btn {
-    background-color: #D41500;
+.search-bar {
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 700px;  /* Maximum width for the search bar */
+}
+
+/* Input field styling */
+.search-form input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.search-form input[type="text"]:focus {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.6);  /* Glow effect */
+    padding-left: 30px; /* Adds space when focused */
+}
+
+/* Button styling */
+.search-form button {
+    background-color: #6b0000;
     color: white;
     border: none;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    margin: 10px;
+    text-align:center;
 }
 
-#ask-btn:hover {
+/* Hover effect on button */
+.search-form button:hover {
     background-color: #A31200;
+    transform: translateY(-3px);  /* Slight lift on hover */
 }
+
+/* Active effect on button press */
+.search-form button:active {
+    transform: translateY(1px);  /* Button 'press' effect */
+}
+
+/* Optional: Clear button icon */
+.search-form input[type="text"]::placeholder {
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.search-form input[type="text"]:focus::placeholder {
+    color: transparent; /* Placeholder disappears on focus */
+}
+
+/* SEARCH BAR STYLING END */
+
+
+
+
+
+
+
+
 
 /* Footer */
 footer {
