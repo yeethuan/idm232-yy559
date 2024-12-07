@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simmer</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
     <script src="https://kit.fontawesome.com/f4cf6f4ce3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,7 +16,7 @@
         <!-- nav bar -->
         <nav class="navbar">
             <a href="index.php" class="logo">
-                <img src="media/new-simmerlogo.webp" alt="Simmer Logo 2"/>
+                <img src="pics/simmer-altlogo.webp" alt="Simmer Logo 2"/>
             </a>
             <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
@@ -23,6 +24,7 @@
             <ul id="nav-menu">
                 <li><a href="index.php/">Home</a></li>
                 <li><a href="all-recipes.php">Recipes</a></li>
+                <li><a href="help.php">Help</a></li>
             </ul>
         </nav>
         <script>
@@ -42,7 +44,7 @@
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search recipes..." onkeyup="searchRecipes()">
             </div>
-            <a href="all-recipes.php" class="btn">Explore Recipes</a>
+            <a href="all-recipes.php" class="btn">All Recipes</a>
         </div>
     </section>
 
@@ -85,10 +87,6 @@
     </section>
 
 
-    <!-- Ask Button -->
-    <div class="ask-button">
-        <button id="ask-btn">?</button>
-    </div>
 
 
     <!-- footer -->
