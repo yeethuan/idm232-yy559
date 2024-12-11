@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'trebuchet', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+
+/* BACK BUTTON */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: #A31200;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #A31200;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #A31200;
+    color: white;
+}
+
+
+/* viewport -----------------------------*/
+.recipe-details {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: left;
+}
+
+/* ------------------------------------- */
+
+
+
+/* .recipe-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+} */
+
+.recipe-header {
+    display: grid;
+    grid-template-columns: 2fr;
+    margin-bottom: 30px;
+}
+
+.recipe-image img{
+    width: 35%;
+    border-radius: 10px;
+}
+
+.recipe-titles {
+    width: 50%;
+}
+
+.recipe-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #D41500;
+}
+
+.recipe-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Ingredients and Steps */
+.recipe-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredients, .steps {
+    width: 45%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #A31200;
+}
+
+ul, ol {
+    margin-left: 20px;
+    color: #555;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #D41500;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .recipe-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recipe-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .recipe-info {
+        width: 100%;
+    }
+
+    .recipe-content {
+        flex-direction: column;
+    }
+
+    .ingredients, .steps {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .recipe-info h1 {
+        font-size: 2rem;
+    }
+
+}

@@ -60,3 +60,32 @@ header {
 .show-menu {
     display: block;
 }
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid #ccc;
+    }
+
+    #nav-menu li {
+        margin: 10px 0;
+    }
+
+}

@@ -72,7 +72,8 @@ p {
 .card img {
     border-radius: 10px;
     margin-bottom: 20px;
-    max-width: 300px;
+    width: 300px;
+    height: 300px;
 }
 
 
@@ -101,14 +102,66 @@ p {
 
 /* SEARCH BAR STYLING */
 .search {
+    width: 100%; /* Full width */
+    background-color: #A31200; /* Background color */
+    padding: 20px 0; /* Space above and below the search */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5dea5;
+    justify-content: center; /* Center the content horizontally */
 }
 
 .search-bar {
+    width: 100%;
+    max-width: 600px; /* Limit the width on larger screens */
+    padding: 0 20px; /* Add some padding for mobile devices */
+}
+
+.search-form {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #fff; 
+    border-radius: 25px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type="text"] {
+    width: 100%; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    border: none; 
+    outline: none; 
+    flex-grow: 1; 
+}
+
+.search-form input[type="text"]::placeholder {
+    color: #aaa; 
+}
+
+.search-form button {
+    background-color: #A31200; 
+    color: white; 
+    border: none; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #8c0f00; /* Slightly darker shade on hover */
+}
+
+.search-form button:active {
+    transform: scale(0.95); /* Button "press" effect */
+}
+
+.search-form button:focus {
+    outline: none;
+}
+
+
+/* .search-bar {
     align-items: center;
     border-radius: 30px;
     overflow: hidden;
@@ -116,61 +169,9 @@ p {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     width: 100%;
-    max-width: 700px;  /* Maximum width for the search bar */
-}
+    max-width: 700px;  
+} */
 
-/* Input field styling */
-.search-form input[type="text"] {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f0f0f0;
-}
-
-.search-form input[type="text"]:focus {
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 122, 255, 0.6);  /* Glow effect */
-    padding-left: 30px; /* Adds space when focused */
-}
-
-/* Button styling */
-.search-form button {
-    background-color: #6b0000;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 16px;
-    margin: 10px;
-    text-align:center;
-}
-
-/* Hover effect on button */
-.search-form button:hover {
-    background-color: #A31200;
-    transform: translateY(-3px);  /* Slight lift on hover */
-}
-
-/* Active effect on button press */
-.search-form button:active {
-    transform: translateY(1px);  /* Button 'press' effect */
-}
-
-/* Optional: Clear button icon */
-.search-form input[type="text"]::placeholder {
-    color: #888;
-    transition: color 0.3s ease;
-}
-
-.search-form input[type="text"]:focus::placeholder {
-    color: transparent; /* Placeholder disappears on focus */
-}
 
 /* SEARCH BAR STYLING END */
 

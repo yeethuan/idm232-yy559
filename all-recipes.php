@@ -63,22 +63,22 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             <a href="index.php" class="logo">
                 <img src="pics/simmer-altlogo.webp" alt="Simmer Logo 2"/>
             </a>
-            <div class="menu-icon" id="menu-icon">
+            <!-- <div class="menu-icon" id="menu-icon">
                 <i class="fas fa-bars"></i>
-            </div>
+            </div> -->
             <ul id="nav-menu">
-                <li><a href="https://digmstudents.westphal.drexel.edu/~yy559/index.php">Home</a></li>
-                <li><a href="https://digmstudents.westphal.drexel.edu/~yy559/all-recipes.php">Recipes</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="all-recipes.php">Recipes</a></li>
                 <li><a href="help.php">Help</a></li>
             </ul>
         </nav>
 
-        <script>
+        <!-- <script>
             document.getElementById("menu-icon").addEventListener("click", function() {
             const navMenu = document.getElementById("nav-menu");
             navMenu.classList.toggle("show-menu");
         });
-        </script>
+        </script> -->
     </header>
 
 
