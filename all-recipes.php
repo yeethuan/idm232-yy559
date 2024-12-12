@@ -107,7 +107,9 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                         <!-- Recipe Image -->
                         <img src="pics/<?php echo ($recipe['main_image']); ?>" alt="Recipe Image" class="pic">
                         <h2 class="recipe-title"><?php echo ($recipe['title']); ?></h2>
-                        <h3 class="recipe-subtitle"><?php echo ($recipe['subtitle']); ?></h3>
+                        <p>
+                            <span><i class="fa-solid fa-clock"></i> <?php echo $recipe['cook_time']; ?></span>
+                        </p>
                     </div>
                 </a>
                     

@@ -39,6 +39,7 @@ if (!$recipe) {
     <link rel="stylesheet" href="header.css">
     <script src="https://kit.fontawesome.com/f4cf6f4ce3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <header>
@@ -47,43 +48,37 @@ if (!$recipe) {
             <a href="index.php" class="logo">
                 <img src="pics/simmer-altlogo.webp" alt="Simmer Logo 2"/>
             </a>
-            <!-- <div class="menu-icon" id="menu-icon">
-                <i class="fas fa-bars"></i>
-            </div> -->
             <ul id="nav-menu">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="all-recipes.php">Recipes</a></li>
                 <li><a href="help.php">Help</a></li>
             </ul>
         </nav>
-
-        <!-- <script>
-            document.getElementById("menu-icon").addEventListener("click", function() {
-            const navMenu = document.getElementById("nav-menu");
-            navMenu.classList.toggle("show-menu");
-        });
-        </script> -->
     </header>
 
     <!-- big wrapper -->
     <section class="recipe-details">
 
         <div class="back-button">
-            <a href="all-recipes.php" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Recipes</a>
+            <a href="index.php" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Recipes</a>
         </div>
 
-        <!-- Recipe Image -->
+        <!-- Recipe Image GRID STARTS-->
+        
+        <!-- Recipe Header with Image, Title, Subtitle, and Description -->
         <div class="recipe-header">
-            <img src="pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
+            <!-- Column 1: Image, Title, and Subtitle -->
+            <div class="image-title-column">
+                <img src="pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
+            </div>
 
-            <!-- Title + Subtitle + Blurb -->
-            <div class="recipe-titles">
+            <!-- Column 2: Description -->
+            <div class="description-column">
                 <h1 class="title"><?php echo $recipe['title']; ?></h1>
                 <h3 class="subtitle"><?php echo $recipe['subtitle']; ?></h3>
                 <p class="description"><?php echo $recipe['description']; ?></p>
 
-            <!-- Recipe cook time + serving size + protein + calories -->
-            <div class="info">
+                <!-- Recipe cook time + serving size + protein + calories -->
+                <div class="info">
                     <div class="cook-time">
                         <i class="fa-solid fa-clock"></i>
                         <span><?php echo $recipe['cook_time']; ?></span>
@@ -103,19 +98,21 @@ if (!$recipe) {
                         <i class="fa-solid fa-weight-scale"></i>
                         <span><?php echo $recipe['calories']; ?></span>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
+
+        <hr>
 
 
         <!-- Recipe Ingredients  -->
         <div class="recipe-content">
-            <div class="ingredients">
-                <h2>Ingredients</h2>
-                <div class="ingredients-image">
-                    <img src="images/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image">
-                </div>
-        
+            <h2>Ingredients</h2>
+            <h3>Make sure you have everything!</h3>
+            <div class="ingredients-image">
+                <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image">
+            </div>
+            <div class="ingredients">                
                 <ul>
                     <?php
                     $ingredients = explode('*', $recipe['ingredients']);
@@ -127,11 +124,11 @@ if (!$recipe) {
                 </ul>
             </div>
 
+            <br>
 
-
+            <h2>Instructions</h2>
             <div class="steps-detail">
                 <!-- Steps List -->
-                <h2>Instruction</h2>
                 <?php
                 $steps = explode('*', $recipe['steps']);
                 $steps_images = explode('*', $recipe['steps_image']);
@@ -142,7 +139,7 @@ if (!$recipe) {
                  // Display the image for the current step
                 echo '<div class="steps-image">';
                 if (isset($steps_images[$index])) {
-                echo '<img src="images/' . htmlspecialchars($steps_images[$index]) . '" alt="Step Image ' . ($index + 1) . '">';
+                echo '<img src="pics/' . htmlspecialchars($steps_images[$index]) . '" alt="Step Image ' . ($index + 1) . '">';
                 }
                 echo '</div>';
         
